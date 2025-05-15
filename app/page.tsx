@@ -166,16 +166,16 @@ export default function Home() {
       </section>
 
       {/* Sección 3: IA en el aula */}
-      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-8 px-2 sm:px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col gap-4 h-[1000px] md:h-[1200px] w-full">
-              <div className="relative flex-1 h-40 md:h-60 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className="flex flex-col gap-2 h-auto md:h-[1000px] w-full">
+              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
                 <Image
                   src="/ia-ninos.jpg"
                   alt="Estudiantes en clase digital"
@@ -184,7 +184,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
               </div>
-              <div className="relative flex-1 h-40 md:h-60 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
                 <Image
                   src="/ia-oficina.jpg"
                   alt="Oficina de trabajo digital"
@@ -192,6 +192,18 @@ export default function Home() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+              </div>
+              <div className="relative h-40 md:h-60 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/br9b3-cxTPQ"
+                  title="¿Qué es la IA generativa? – EducaIA"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </motion.div>
@@ -239,18 +251,6 @@ export default function Home() {
             </div>
             <div className="flex flex-col md:flex-row gap-8 mt-8">
               <div className="flex-1">
-                <div className="relative h-64 md:h-80 max-w-2xl w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 aspect-[16/6]">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src="https://www.youtube.com/embed/br9b3-cxTPQ"
-                    title="¿Qué es la IA generativa? – EducaIA"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
               </div>
               <div className="flex-1 flex flex-col items-center">
               </div>
