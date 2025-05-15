@@ -174,8 +174,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="flex flex-col gap-4 h-[800px] md:h-[1000px] w-full">
-              <div className="relative flex-1 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className="flex flex-col gap-4 h-[1000px] md:h-[1200px] w-full">
+              <div className="relative flex-1 h-40 md:h-60 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
                 <Image
                   src="/ia-ninos.jpg"
                   alt="Estudiantes en clase digital"
@@ -184,7 +184,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
               </div>
-              <div className="relative flex-1 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+              <div className="relative flex-1 h-40 md:h-60 rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
                 <Image
                   src="/ia-oficina.jpg"
                   alt="Oficina de trabajo digital"
@@ -237,17 +237,23 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="aspect-video w-full rounded-lg overflow-hidden shadow-lg shadow-purple-500/10">
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/br9b3-cxTPQ"
-                title="¿Qué es la IA generativa? – EducaIA"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+            <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <div className="flex-1">
+                <div className="relative h-64 md:h-80 max-w-2xl w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 aspect-[16/6]">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/br9b3-cxTPQ"
+                    title="¿Qué es la IA generativa? – EducaIA"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
+              </div>
+              <div className="flex-1 flex flex-col items-center">
+              </div>
             </div>
           </motion.div>
         </div>
@@ -263,19 +269,29 @@ export default function Home() {
               />
             </div>
           </div>
+          <div className="w-full flex justify-center gap-4 my-12">
+            <a
+              href="https://sora.chatgpt.com/explore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
+            >
+              Explorar Sora ChatGPT
+            </a>
+            <a
+              href="https://www.datalytics.com/blog/que-es-la-ia-generativa-y-como-funciona/?utm_term=ia%20generativa&utm_campaign=3+-+BLOG+-+AR+Search+-+Leva+Digital+Agency+7-3-24&utm_source=adwords&utm_medium=ppc&hsa_acc=7486748770&hsa_cam=22138853906&hsa_grp=178868411492&hsa_ad=729612081302&hsa_src=g&hsa_tgt=kwd-1673839964876&hsa_kw=ia%20generativa&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22138853906&gbraid=0AAAAAD1RTVxpfxMqvLPZbnyZ2aE1_F0aE&gclid=CjwKCAjw_pDBBhBMEiwAmY02NgQhEAVvCk6-rzyA4KT38fz3h0VJyfqvIZY5_j3SC0UophEXZE50YhoC3BgQAvD_BwE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
+            >
+              Ver artículo completo
+            </a>
+          </div>
           <ul className="bg-gray-800/80 p-6 rounded-lg text-white text-lg max-w-2xl w-full space-y-2">
             <li>• ¿Qué es una IA generativa? <span className="text-gray-400">(texto, imagen, código, audio)</span></li>
             <li>• ¿Cómo se usa hoy en educación? <span className="text-gray-400">(asistentes, corrección, generación de recursos, personalización del aprendizaje)</span></li>
             <li>• ¿Qué preguntas éticas se abren? <span className="text-gray-400">(plagio, sesgo, dependencia tecnológica)</span></li>
           </ul>
-          <a
-            href="https://sora.chatgpt.com/explore"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
-          >
-            Explorar Sora ChatGPT
-          </a>
         </div>
       </section>
 
@@ -367,19 +383,27 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-            className="relative h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10"
+            className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 mb-12"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Image
-              src="https://images.unsplash.com/photo-1606326608695-05cfb170dfaf"
-              alt="Aula creativa, pizarras y notas"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+            <div className="w-full aspect-[16/6] bg-[#F4F4F4] border border-gray-200 rounded-lg overflow-hidden">
+              <iframe
+                src="https://padlet.com/embed/stncg6n3iar0eqpz"
+                frameBorder="0"
+                allow="camera;microphone;geolocation;display-capture;clipboard-write"
+                style={{ width: '100%', height: '100%', display: 'block' }}
+                className="w-full h-[350px] md:h-[608px]"
+                title="Padlet colaborativo"
+              ></iframe>
+              <div className="flex items-center justify-end h-7">
+                <a href="https://padlet.com?ref=embed" target="_blank" rel="noopener noreferrer">
+                  <img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" alt="Hecho con Padlet" />
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -504,16 +528,6 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-            <motion.div whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 400, damping: 10 }}>
-              <Button
-                className="bg-purple-600 hover:bg-purple-700 text-white border-none shadow-lg shadow-purple-500/20"
-                asChild
-              >
-                <a href="https://padlet.com/dashboard" target="_blank" rel="noopener noreferrer">
-                  Explorar Padlet
-                </a>
-              </Button>
-            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
