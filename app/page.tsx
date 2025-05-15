@@ -293,15 +293,15 @@ export default function Home() {
           </motion.h2>
 
           <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
             <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-purple-500/50 group">
-                <div className="relative h-96 md:h-[32rem] aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-purple-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src="/personalizacion.jpg"
                     alt="Personalización con IA"
@@ -322,8 +322,8 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-cyan-500/50 group">
-                <div className="relative h-96 md:h-[32rem] aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-cyan-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src="/autonomo.jpg"
                     alt="Aprendizaje autónomo"
@@ -344,8 +344,8 @@ export default function Home() {
             </motion.div>
 
             <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-green-500/50 group">
-                <div className="relative h-96 md:h-[32rem] aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-green-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
                   <Image
                     src="/colaboracion.jpg"
                     alt="Trabajo colaborativo"
@@ -386,7 +386,7 @@ export default function Home() {
 
       {/* Sección 5: Aula en acción */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -521,7 +521,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div className="relative h-96 md:h-[32rem] aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+            <div className="relative h-56 md:h-[32rem] aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 transform hover:scale-[1.02] transition-transform duration-500 mb-8 md:mb-0">
               <Image
                 src="/aula.jpg"
                 alt="Aula en acción"
