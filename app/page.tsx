@@ -165,250 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 3: IA en el aula */}
-      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-8 px-2 sm:px-4">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="flex flex-col gap-2 h-auto md:h-[1000px] w-full">
-              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-                <Image
-                  src="/ia-ninos.jpg"
-                  alt="Estudiantes en clase digital"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
-              </div>
-              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-                <Image
-                  src="/ia-oficina.jpg"
-                  alt="Oficina de trabajo digital"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
-              </div>
-              <div className="relative h-40 md:h-60 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  src="https://www.youtube.com/embed/br9b3-cxTPQ"
-                  title="¿Qué es la IA generativa? – EducaIA"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-400">IA en el aula</h2>
-            <p className="text-lg text-gray-300 mb-6">
-              La inteligencia artificial está transformando la educación de maneras que apenas comenzamos a comprender.
-              Desde asistentes virtuales hasta sistemas de aprendizaje adaptativo, la IA ofrece nuevas posibilidades
-              para personalizar la experiencia educativa, pero también plantea importantes desafíos éticos y
-              pedagógicos.
-            </p>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-md mb-6 border border-gray-700">
-              <h3 className="text-xl font-semibold mb-3 text-cyan-300">Actividad propuesta</h3>
-              <p className="text-gray-300 mb-4">"¿Texto humano o texto generado por IA?"</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
-                  #EfectosDeLaTecnología
-                </span>
-                <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
-                  #InteligenciaArtificial
-                </span>
-                <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
-                  #EducaciónDigital
-                </span>
-              </div>
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1">
-                  <InteractiveTextButton
-                    label="Mostrar texto 1"
-                    text="La tecnología me ayuda mucho a estudiar, sobre todo YouTube y Google. Pero a veces me distrae demasiado. Siento que aprendo más cuando hago cosas con otros, como en grupo."
-                  />
-                </div>
-                <div className="flex-1">
-                  <InteractiveTextButton
-                    label="Mostrar texto 2"
-                    text="La tecnología representa una oportunidad transformadora en la educación, pero también exige responsabilidad. Los entornos colaborativos digitales permiten nuevas formas de construir saberes, aunque deben estar guiados por una pedagogía crítica."
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row gap-8 mt-8">
-              <div className="flex-1">
-              </div>
-              <div className="flex-1 flex flex-col items-center">
-              </div>
-            </div>
-          </motion.div>
-        </div>
-        <div className="mt-8 flex flex-col items-center">
-          <div className="w-full flex justify-center items-center mb-4">
-            <div className="relative w-full max-w-5xl aspect-[16/5] bg-black rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-              <Image
-                src="/sora-explore-bar.jpg"
-                alt="Vista en miniatura de Sora ChatGPT Explore"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-          </div>
-          <div className="w-full flex justify-center gap-4 my-12">
-            <a
-              href="https://sora.chatgpt.com/explore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
-            >
-              Explorar Sora ChatGPT
-            </a>
-            <a
-              href="https://www.datalytics.com/blog/que-es-la-ia-generativa-y-como-funciona/?utm_term=ia%20generativa&utm_campaign=3+-+BLOG+-+AR+Search+-+Leva+Digital+Agency+7-3-24&utm_source=adwords&utm_medium=ppc&hsa_acc=7486748770&hsa_cam=22138853906&hsa_grp=178868411492&hsa_ad=729612081302&hsa_src=g&hsa_tgt=kwd-1673839964876&hsa_kw=ia%20generativa&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22138853906&gbraid=0AAAAAD1RTVxpfxMqvLPZbnyZ2aE1_F0aE&gclid=CjwKCAjw_pDBBhBMEiwAmY02NgQhEAVvCk6-rzyA4KT38fz3h0VJyfqvIZY5_j3SC0UophEXZE50YhoC3BgQAvD_BwE"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
-            >
-              Ver artículo completo
-            </a>
-          </div>
-          <ul className="bg-gray-800/80 p-6 rounded-lg text-white text-lg max-w-2xl w-full space-y-2">
-            <li>• ¿Qué es una IA generativa? <span className="text-gray-400">(texto, imagen, código, audio)</span></li>
-            <li>• ¿Cómo se usa hoy en educación? <span className="text-gray-400">(asistentes, corrección, generación de recursos, personalización del aprendizaje)</span></li>
-            <li>• ¿Qué preguntas éticas se abren? <span className="text-gray-400">(plagio, sesgo, dependencia tecnológica)</span></li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Sección 4: Escenas de aprendizaje */}
-      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-12 text-cyan-400 text-center"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            Escenas de aprendizaje
-          </motion.h2>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-purple-500/50 group w-full">
-                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
-                  <Image
-                    src="/personalizacion.jpg"
-                    alt="Personalización con IA"
-                    fill
-                    className="object-cover transition-transform duration-500 cursor-pointer"
-                    onClick={() => setLightbox({src: '/personalizacion.jpg', alt: 'Personalización con IA'})}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-purple-300">Personalización con IA</h3>
-                  <p className="text-gray-300">
-                    Una docente usando ChatGPT para personalizar ejercicios de lectura adaptados a las necesidades
-                    específicas de cada estudiante.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-cyan-500/50 group w-full">
-                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
-                  <Image
-                    src="/autonomo.jpg"
-                    alt="Aprendizaje autónomo"
-                    fill
-                    className="object-cover transition-transform duration-500 cursor-pointer"
-                    onClick={() => setLightbox({src: '/autonomo.jpg', alt: 'Aprendizaje autónomo'})}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-cyan-300">Aprendizaje autónomo</h3>
-                  <p className="text-gray-300">
-                    Un estudiante aprendiendo programación con YouTube y foros, desarrollando habilidades de autogestión
-                    del conocimiento.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={fadeIn}>
-              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-green-500/50 group w-full">
-                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
-                  <Image
-                    src="/colaboracion.jpg"
-                    alt="Trabajo colaborativo"
-                    fill
-                    className="object-cover transition-transform duration-500 cursor-pointer"
-                    onClick={() => setLightbox({src: '/colaboracion.jpg', alt: 'Trabajo colaborativo'})}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-green-300">Colaboración digital</h3>
-                  <p className="text-gray-300">
-                    Estudiantes colaborando en un proyecto utilizando herramientas digitales para la creación colectiva
-                    de conocimiento.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-full aspect-[16/6] bg-[#F4F4F4] border border-gray-200 rounded-lg overflow-hidden">
-              <iframe
-                src="https://padlet.com/embed/stncg6n3iar0eqpz"
-                frameBorder="0"
-                allow="camera;microphone;geolocation;display-capture;clipboard-write"
-                style={{ width: '100%', height: '100%', display: 'block' }}
-                className="w-full h-[350px] md:h-[608px]"
-                title="Padlet colaborativo"
-              ></iframe>
-              <div className="flex items-center justify-end h-7">
-                <a href="https://padlet.com?ref=embed" target="_blank" rel="noopener noreferrer">
-                  <img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" alt="Hecho con Padlet" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Sección 5: Aula en acción */}
+      {/* Sección 3: Aula en acción */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -548,6 +305,279 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Sección 4: IA en el aula */}
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-8 px-2 sm:px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex flex-col gap-2 h-auto md:h-[1000px] w-full">
+              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                <Image
+                  src="/ia-ninos.jpg"
+                  alt="Estudiantes en clase digital"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+              </div>
+              <div className="relative h-56 md:h-96 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                <Image
+                  src="/ia-oficina.jpg"
+                  alt="Oficina de trabajo digital"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent"></div>
+              </div>
+              <div className="relative h-40 md:h-60 aspect-[16/9] w-full mx-auto rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/br9b3-cxTPQ"
+                  title="¿Qué es la IA generativa? – EducaIA"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-400">IA en el aula</h2>
+            <p className="text-lg text-gray-300 mb-6">
+              La inteligencia artificial está transformando la educación de maneras que apenas comenzamos a comprender.
+              Desde asistentes virtuales hasta sistemas de aprendizaje adaptativo, la IA ofrece nuevas posibilidades
+              para personalizar la experiencia educativa, pero también plantea importantes desafíos éticos y
+              pedagógicos.
+            </p>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md mb-6 border border-gray-700">
+              <h3 className="text-xl font-semibold mb-3 text-cyan-300">Actividad propuesta</h3>
+              <p className="text-gray-300 mb-4">"¿Texto humano o texto generado por IA?"</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                  #EfectosDeLaTecnología
+                </span>
+                <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                  #InteligenciaArtificial
+                </span>
+                <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                  #EducaciónDigital
+                </span>
+              </div>
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1">
+                  <InteractiveTextButton
+                    label="Mostrar texto 1"
+                    text="La tecnología me ayuda mucho a estudiar, sobre todo YouTube y Google. Pero a veces me distrae demasiado. Siento que aprendo más cuando hago cosas con otros, como en grupo."
+                  />
+                </div>
+                <div className="flex-1">
+                  <InteractiveTextButton
+                    label="Mostrar texto 2"
+                    text="La tecnología representa una oportunidad transformadora en la educación, pero también exige responsabilidad. Los entornos colaborativos digitales permiten nuevas formas de construir saberes, aunque deben estar guiados por una pedagogía crítica."
+                  />
+                </div>
+              </div>
+            </div>
+            <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-colors">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+                    <p className="text-cyan-300 leading-relaxed">
+                      ¿En qué situaciones de su vida académica o personal ya usaron o vieron usar IA?
+                    </p>
+                  </div>
+                  <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+                    <p className="text-purple-300 leading-relaxed">
+                      ¿Qué oportunidades abre la IA para docentes y estudiantes? ¿Qué riesgos o desafíos plantea?
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <div className="flex flex-col md:flex-row gap-8 mt-8">
+              <div className="flex-1">
+              </div>
+              <div className="flex-1 flex flex-col items-center">
+              </div>
+            </div>
+          </motion.div>
+        </div>
+        <div className="mt-8 flex flex-col items-center">
+          <div className="w-full flex justify-center items-center mb-4">
+            <div className="relative w-full max-w-5xl aspect-[16/5] bg-black rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+              <Image
+                src="/sora-explore-bar.jpg"
+                alt="Vista en miniatura de Sora ChatGPT Explore"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+          <div className="w-full flex justify-center gap-4 my-12">
+            <a
+              href="https://sora.chatgpt.com/explore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
+            >
+              Explorar Sora ChatGPT
+            </a>
+            <a
+              href="https://www.datalytics.com/blog/que-es-la-ia-generativa-y-como-funciona/?utm_term=ia%20generativa&utm_campaign=3+-+BLOG+-+AR+Search+-+Leva+Digital+Agency+7-3-24&utm_source=adwords&utm_medium=ppc&hsa_acc=7486748770&hsa_cam=22138853906&hsa_grp=178868411492&hsa_ad=729612081302&hsa_src=g&hsa_tgt=kwd-1673839964876&hsa_kw=ia%20generativa&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22138853906&gbraid=0AAAAAD1RTVxpfxMqvLPZbnyZ2aE1_F0aE&gclid=CjwKCAjw_pDBBhBMEiwAmY02NgQhEAVvCk6-rzyA4KT38fz3h0VJyfqvIZY5_j3SC0UophEXZE50YhoC3BgQAvD_BwE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
+            >
+              Ver artículo completo
+            </a>
+          </div>
+          <ul className="bg-gray-800/80 p-6 rounded-lg text-white text-lg max-w-2xl w-full space-y-2">
+            <li>• ¿Qué es una IA generativa? <span className="text-gray-400">(texto, imagen, código, audio)</span></li>
+            <li>• ¿Cómo se usa hoy en educación? <span className="text-gray-400">(asistentes, corrección, generación de recursos, personalización del aprendizaje)</span></li>
+            <li>• ¿Qué preguntas éticas se abren? <span className="text-gray-400">(plagio, sesgo, dependencia tecnológica)</span></li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Sección 5: Escenas de aprendizaje */}
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-12 text-cyan-400 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Escenas de aprendizaje
+          </motion.h2>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={fadeIn}>
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-purple-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+                  <Image
+                    src="/personalizacion.jpg"
+                    alt="Pulgarcita en el aula"
+                    fill
+                    className="object-cover transition-transform duration-500 cursor-pointer"
+                    onClick={() => setLightbox({src: '/personalizacion.jpg', alt: 'Pulgarcita en el aula'})}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-purple-300">1. Pulgarcita en el aula</h3>
+                  <p className="text-gray-300">
+                    Una adolescente entra a clase mientras responde mensajes de voz, mira TikTok y chatea en Discord. El profesor habla de las funciones del lenguaje. Ella está, pero no está. ¿Aprende? ¿Desaprende? ¿Qué tipo de atención circula?
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeIn}>
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-cyan-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+                  <Image
+                    src="/autonomo.jpg"
+                    alt="Profe ChatGPT"
+                    fill
+                    className="object-cover transition-transform duration-500 cursor-pointer"
+                    onClick={() => setLightbox({src: '/autonomo.jpg', alt: 'Profe ChatGPT'})}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-cyan-300">2. Profe ChatGPT</h3>
+                  <p className="text-gray-300">
+                    Un estudiante entrega un trabajo brillante, pero el docente duda. "¿Lo hiciste vos?". El alumno responde: "Lo armé con IA, pero aprendí mucho igual". ¿Hubo trampa o hubo proceso? ¿Qué vale más: el resultado o el trayecto?
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div variants={fadeIn}>
+              <Card className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-800 border-gray-700 hover:border-green-500/50 group w-full">
+                <div className="relative h-56 md:h-96 aspect-[16/6] w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 transform hover:scale-[1.02] transition-transform duration-500">
+                  <Image
+                    src="/colaboracion.jpg"
+                    alt="Tutorial de YouTube a las 3 AM"
+                    fill
+                    className="object-cover transition-transform duration-500 cursor-pointer"
+                    onClick={() => setLightbox({src: '/colaboracion.jpg', alt: 'Tutorial de YouTube a las 3 AM'})}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-green-300">3. Tutorial de YouTube a las 3 AM</h3>
+                  <p className="text-gray-300">
+                    Un joven que no entiende matemáticas encuentra a la madrugada un canal que explica con memes y ejemplos. Por primera vez, resuelve un ejercicio solo. ¿Esa escena cuenta como aprendizaje?
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-green-500/50 transition-colors">
+              <CardContent className="p-6 text-center">
+                <h3 className="text-2xl font-bold text-green-400 mb-4">Nuestra Escena</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Relaten, creen o reconstruyan una escena significativa. Puede ser con texto, collage, video, podcast, memes, etc.
+                </p>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div
+            className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 mb-12"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-full aspect-[16/6] bg-[#F4F4F4] border border-gray-200 rounded-lg overflow-hidden">
+              <iframe
+                src="https://padlet.com/embed/stncg6n3iar0eqpz"
+                frameBorder="0"
+                allow="camera;microphone;geolocation;display-capture;clipboard-write"
+                style={{ width: '100%', height: '100%', display: 'block' }}
+                className="w-full h-[350px] md:h-[608px]"
+                title="Padlet colaborativo"
+              ></iframe>
+              <div className="flex items-center justify-end h-7">
+                <a href="https://padlet.com?ref=embed" target="_blank" rel="noopener noreferrer">
+                  <img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" alt="Hecho con Padlet" />
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Sección 6: Acción */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
@@ -568,7 +598,7 @@ export default function Home() {
                 <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
                 <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
                 <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
-                <li><b>Subida obligatoria</b> al Padlet colaborativo.</li>
+                <li><b>Subir</b> al Padlet colaborativo.</li>
               </ul>
             </div>
           </div>
