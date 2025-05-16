@@ -70,7 +70,7 @@ export default function Home() {
               Alfabetización Digital
             </motion.h1>
             <motion.h2 className="text-xl md:text-2xl mb-8 text-gray-200" variants={fadeIn}>
-              Un viaje por la cultura digital, la inteligencia artificial y la educación del siglo XXI.
+              Un viaje por la cultura digital y la educación del siglo XXI.
             </motion.h2>
             <motion.p className="text-lg md:text-xl italic max-w-2xl mx-auto mb-12 text-gray-300" variants={fadeIn}>
               "No se trata solo de usar tecnología, sino de comprender cómo nos transforma."
