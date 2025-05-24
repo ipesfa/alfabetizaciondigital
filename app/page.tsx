@@ -28,9 +28,31 @@ const staggerContainer = {
   },
 }
 
+// Componente de pestañas
+function Tabs({ tabs, activeTab, setActiveTab }: { tabs: string[], activeTab: number, setActiveTab: (index: number) => void }) {
+  return (
+    <div className="flex space-x-2 mb-6">
+      {tabs.map((tab, index) => (
+        <button
+          key={index}
+          onClick={() => setActiveTab(index)}
+          className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+            activeTab === index
+              ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/20'
+              : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+          }`}
+        >
+          {tab}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 export default function Home() {
   const scrollRef = useRef(null)
   const [lightbox, setLightbox] = useState<{src: string, alt: string} | null>(null)
+  const [activeTab, setActiveTab] = useState(0)
 
   useEffect(() => {
     if (!lightbox) return;
@@ -117,7 +139,166 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Sección 2: Pulgarcita */}
+      {/* Sección 2: Clases */}
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-12 text-cyan-400 text-center"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Clases
+          </motion.h2>
+
+          <motion.div
+            className="grid grid-cols-1 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <Card className="bg-gray-800/90 border border-gray-700 hover:border-cyan-500/50 transition-colors">
+              <CardContent className="p-6">
+                <Tabs 
+                  tabs={["Introducción a la IA", "Año 2125: Escuela Orbital"]} 
+                  activeTab={activeTab} 
+                  setActiveTab={setActiveTab} 
+                />
+                
+                {activeTab === 0 && (
+                  <>
+                    <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                      Introducción a la IA en la Educación
+                    </h3>
+                    <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                      <p className="text-gray-300 mb-4">
+                        En esta primera semana, exploraremos los conceptos fundamentales de la Inteligencia Artificial y su impacto en la educación. A través de actividades prácticas y reflexiones grupales, analizaremos cómo la IA está transformando los procesos de enseñanza y aprendizaje.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                          #InteligenciaArtificial
+                        </span>
+                        <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                          #EducaciónDigital
+                        </span>
+                        <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                          #AprendizajeColaborativo
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                      <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
+                        <iframe
+                          src="https://padlet.com/embed/stncg6n3iar0eqpz"
+                          frameBorder="0"
+                          allow="camera;microphone;geolocation;display-capture;clipboard-write"
+                          style={{ width: '100%', height: '100%', display: 'block' }}
+                          className="w-full h-[500px] md:h-[608px]"
+                          title="Padlet colaborativo"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {activeTab === 1 && (
+                  <>
+                    <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                      Año 2125: Escuela Orbital Argentina
+                    </h3>
+                    <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                      <p className="text-gray-300 mb-4">
+                        Explora el futuro de la educación en un escenario donde la tecnología y la innovación han transformado completamente la forma en que aprendemos y enseñamos.
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                          #FuturoEducativo
+                        </span>
+                        <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                          #InnovaciónEducativa
+                        </span>
+                        <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                          #TecnologíaEducativa
+                        </span>
+                      </div>
+                    </div>
+                    <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                      <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
+                        <iframe
+                          title="Año 2125 Escuela Orbital Argentina"
+                          frameBorder="0"
+                          width="1200"
+                          height="675"
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          src="https://view.genially.com/682c82cbb342df338363e997"
+                          allow="fullscreen"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </CardContent>
+            </Card>
+            <div className="mt-8 flex flex-col items-center">
+              <motion.a
+                href="https://docs.google.com/spreadsheets/d/1C0cJPd6cNQHjUlVtDJdjZS7afSh118Seoe4x2h5hrhc/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="text-2xl">🏆</span>
+                <span>¡Consulta tu Ranking de Insignias!</span>
+                <span className="text-2xl">🏆</span>
+              </motion.a>
+              <p className="mt-2 text-sm text-gray-400 italic">
+                * Solo se puede acceder con tu cuenta institucional
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Sección 3: Acción */}
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">Acción</h2>
+          <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-left text-lg text-white">
+            <div className="mb-4 flex items-center gap-2">
+              <span className="text-2xl">📌</span>
+              <span className="font-semibold">Consigna:</span>
+            </div>
+            <p className="mb-6">
+              En grupos de 2 a 3 personas, deberán ponerse en el rol de docentes de un área curricular (Ej: Lengua, Matemática, Educación Artística, Formación Ética, etc.) y desarrollar una breve secuencia didáctica creativa para trabajar el 25 de mayo en un aula de nivel ?
+            </p>
+            <div className="bg-gray-900/80 rounded-lg p-6 mb-8">
+              <h3 className="text-cyan-300 font-semibold mb-3 text-lg">🧩 Incluí:</h3>
+              <ul className="list-disc list-inside space-y-2 text-base">
+                <li><b>Nivel y curso</b> al que está dirigida la secuencia</li>
+                <li><b>Objetivo de aprendizaje</b></li>
+                <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
+                <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
+                <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
+                <li><b>Subir</b> al Padlet colaborativo.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="w-full flex justify-center mt-8">
+            <div className="relative w-full max-w-3xl aspect-[16/5] rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 bg-white flex items-center justify-center">
+              <img
+                src="/argentina.jpg"
+                alt="Bandera de Argentina"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sección 4: Pulgarcita */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -165,7 +346,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 3: Aula en acción */}
+      {/* Sección 5: Aula en acción */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -305,7 +486,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 4: IA en el aula */}
+      {/* Sección 6: IA en el aula */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-8 px-2 sm:px-4">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <motion.div
@@ -451,7 +632,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Sección 5: Escenas de aprendizaje */}
+      {/* Sección 7: Escenas de aprendizaje */}
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <motion.h2
@@ -551,66 +732,6 @@ export default function Home() {
               </CardContent>
             </Card>
           </motion.div>
-
-          <motion.div
-            className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-purple-500/10 mb-12"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-full aspect-[16/6] bg-[#F4F4F4] border border-gray-200 rounded-lg overflow-hidden">
-              <iframe
-                src="https://padlet.com/embed/stncg6n3iar0eqpz"
-                frameBorder="0"
-                allow="camera;microphone;geolocation;display-capture;clipboard-write"
-                style={{ width: '100%', height: '100%', display: 'block' }}
-                className="w-full h-[350px] md:h-[608px]"
-                title="Padlet colaborativo"
-              ></iframe>
-              <div className="flex items-center justify-end h-7">
-                <a href="https://padlet.com?ref=embed" target="_blank" rel="noopener noreferrer">
-                  <img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" alt="Hecho con Padlet" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Sección 6: Acción */}
-      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">Acción</h2>
-          <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-left text-lg text-white">
-            <div className="mb-4 flex items-center gap-2">
-              <span className="text-2xl">📌</span>
-              <span className="font-semibold">Consigna:</span>
-            </div>
-            <p className="mb-6">
-              En grupos de 2 a 3 personas, deberán ponerse en el rol de docentes de un área curricular (Ej: Lengua, Matemática, Educación Artística, Formación Ética, etc.) y desarrollar una breve secuencia didáctica creativa para trabajar el 25 de mayo en un aula de nivel ?
-            </p>
-            <div className="bg-gray-900/80 rounded-lg p-6 mb-8">
-              <h3 className="text-cyan-300 font-semibold mb-3 text-lg">🧩 Incluí:</h3>
-              <ul className="list-disc list-inside space-y-2 text-base">
-                <li><b>Nivel y curso</b> al que está dirigida la secuencia</li>
-                <li><b>Objetivo de aprendizaje</b></li>
-                <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
-                <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
-                <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
-                <li><b>Subir</b> al Padlet colaborativo.</li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full flex justify-center mt-8">
-            <div className="relative w-full max-w-3xl aspect-[16/5] rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 bg-white flex items-center justify-center">
-              <img
-                src="/argentina.jpg"
-                alt="Bandera de Argentina"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
