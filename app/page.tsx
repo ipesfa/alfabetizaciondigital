@@ -162,7 +162,7 @@ export default function Home() {
             <Card className="bg-gray-800/90 border border-gray-700 hover:border-cyan-500/50 transition-colors">
               <CardContent className="p-6">
                 <Tabs 
-                  tabs={["Introducción a la IA", "Año 2125: Escuela Orbital"]} 
+                  tabs={["Pulgarcita", "Misión Cabildo 2.0"]} 
                   activeTab={activeTab} 
                   setActiveTab={setActiveTab} 
                 />
@@ -170,21 +170,27 @@ export default function Home() {
                 {activeTab === 0 && (
                   <>
                     <h3 className="text-2xl font-bold mb-6 text-cyan-300">
-                      Introducción a la IA en la Educación
+                      Pulgarcita y las Primeras Misiones Digitales
                     </h3>
                     <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
                       <p className="text-gray-300 mb-4">
-                        En esta primera semana, exploraremos los conceptos fundamentales de la Inteligencia Artificial y su impacto en la educación. A través de actividades prácticas y reflexiones grupales, analizaremos cómo la IA está transformando los procesos de enseñanza y aprendizaje.
+                        En la primera clase de Alfabetización Digital, iniciamos nuestro recorrido en formato taller, donde cada estudiante asumió un rol activo en su propio proceso de aprendizaje.
+                      </p>
+                      <p className="text-gray-300 mb-4">
+                        📚 Tomamos como punto de partida el texto de Michel Serres sobre "Pulgarcita", reflexionando sobre los nuevos modos de aprender, enseñar y habitar el aula en contextos profundamente atravesados por lo digital.
+                      </p>
+                      <p className="text-gray-300 mb-4">
+                        💡 Introdujimos el concepto de IA generativa, explorando sus usos, potenciales y desafíos en el campo educativo.
                       </p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
-                          #InteligenciaArtificial
+                          #AlfabetizaciónDigital
                         </span>
                         <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
-                          #EducaciónDigital
+                          #Pulgarcita
                         </span>
                         <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
-                          #AprendizajeColaborativo
+                          #IAGenerativa
                         </span>
                       </div>
                     </div>
@@ -206,21 +212,28 @@ export default function Home() {
                 {activeTab === 1 && (
                   <>
                     <h3 className="text-2xl font-bold mb-6 text-cyan-300">
-                      Año 2125: Escuela Orbital Argentina
+                      Misión Cabildo 2.0
                     </h3>
                     <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
                       <p className="text-gray-300 mb-4">
-                        Explora el futuro de la educación en un escenario donde la tecnología y la innovación han transformado completamente la forma en que aprendemos y enseñamos.
+                        En esta segunda clase, los y las estudiantes asumieron el desafío de diseñar una propuesta digital para reimaginar el 25 de mayo en el futuro, bajo la consigna:
+                      </p>
+                      <p className="text-gray-300 mb-4 font-semibold text-cyan-300">
+                        "¿Cómo recordaríamos el primer gobierno patrio en el año 2125?"
+                      </p>
+                      <p className="text-gray-300 mb-4">
+                        A través de la cápsula interactiva en Genially, se presentó la misión del día:
+                        construir en grupos una escena, pieza o actividad didáctica digital para un acto escolar del futuro, rompiendo con los moldes tradicionales y pensando nuevas formas de conmemorar desde lo tecnológico, lo creativo y lo reflexivo.
                       </p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
-                          #FuturoEducativo
+                          #Cabildo2.0
                         </span>
                         <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
-                          #InnovaciónEducativa
+                          #RevoluciónDigital
                         </span>
                         <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
-                          #TecnologíaEducativa
+                          #EducaciónDelFuturo
                         </span>
                       </div>
                     </div>
