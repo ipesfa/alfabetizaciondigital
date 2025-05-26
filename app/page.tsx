@@ -254,20 +254,34 @@ export default function Home() {
                 )}
               </CardContent>
             </Card>
-            <div className="mt-8 flex flex-col items-center">
-              <motion.a
-                href="https://docs.google.com/spreadsheets/d/1C0cJPd6cNQHjUlVtDJdjZS7afSh118Seoe4x2h5hrhc/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span className="text-2xl">🏆</span>
-                <span>¡Consulta tu Ranking de Insignias!</span>
-                <span className="text-2xl">🏆</span>
-              </motion.a>
-              <p className="mt-2 text-sm text-gray-400 italic">
+            <div className="mt-8 flex flex-col items-center gap-4">
+              <div className="flex gap-4">
+                <motion.a
+                  href="https://docs.google.com/spreadsheets/d/1C0cJPd6cNQHjUlVtDJdjZS7afSh118Seoe4x2h5hrhc/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="text-2xl">🏆</span>
+                  <span>¡Consulta tu Ranking de Insignias!</span>
+                  <span className="text-2xl">🏆</span>
+                </motion.a>
+                <motion.a
+                  href="https://padlet.com/soporte188/mural-digital-alfabetizaci-n-digital-cursada-2025-stncg6n3iar0eqpz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="text-2xl">📝</span>
+                  <span>Padlet de Actividades</span>
+                  <span className="text-2xl">📝</span>
+                </motion.a>
+              </div>
+              <p className="text-sm text-gray-400 italic">
                 * Solo se puede acceder con tu cuenta institucional
               </p>
             </div>
