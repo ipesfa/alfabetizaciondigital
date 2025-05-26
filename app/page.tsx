@@ -177,7 +177,7 @@ export default function Home() {
                         En la primera clase de Alfabetización Digital, iniciamos nuestro recorrido en formato taller, donde cada estudiante asumió un rol activo en su propio proceso de aprendizaje.
                       </p>
                       <p className="text-gray-300 mb-4">
-                        📚 Tomamos como punto de partida el texto de Michel Serres sobre "Pulgarcita", reflexionando sobre los nuevos modos de aprender, enseñar y habitar el aula en contextos profundamente atravesados por lo digital.
+                        📚 Tomamos como punto de partida el video de Michel Serres sobre "Pulgarcita", reflexionando sobre los nuevos modos de aprender, enseñar y habitar el aula en contextos profundamente atravesados por lo digital.
                       </p>
                       <p className="text-gray-300 mb-4">
                         💡 Introdujimos el concepto de IA generativa, explorando sus usos, potenciales y desafíos en el campo educativo.
@@ -255,12 +255,12 @@ export default function Home() {
               </CardContent>
             </Card>
             <div className="mt-8 flex flex-col items-center gap-4">
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
                 <motion.a
                   href="https://docs.google.com/spreadsheets/d/1C0cJPd6cNQHjUlVtDJdjZS7afSh118Seoe4x2h5hrhc/edit?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -272,7 +272,7 @@ export default function Home() {
                   href="https://padlet.com/soporte188/mural-digital-alfabetizaci-n-digital-cursada-2025-stncg6n3iar0eqpz"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -281,7 +281,7 @@ export default function Home() {
                   <span className="text-2xl">📝</span>
                 </motion.a>
               </div>
-              <p className="text-sm text-gray-400 italic">
+              <p className="text-sm text-gray-400 italic text-center px-4">
                 * Solo se puede acceder con tu cuenta institucional
               </p>
             </div>
