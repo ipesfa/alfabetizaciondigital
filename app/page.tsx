@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import ParticlesBackground from "@/components/particles-background"
 import GlowEffect from "@/components/glow-effect"
+import { CardHeader, CardTitle } from "@/components/ui/card"
 
 // Variantes de animación para elementos
 const fadeIn = {
@@ -161,97 +162,138 @@ export default function Home() {
           >
             <Card className="bg-gray-800/90 border border-gray-700 hover:border-cyan-500/50 transition-colors">
               <CardContent className="p-6">
-                <Tabs 
-                  tabs={["Pulgarcita", "Misión Cabildo 2.0"]} 
-                  activeTab={activeTab} 
-                  setActiveTab={setActiveTab} 
-                />
-                
-                {activeTab === 0 && (
-                  <>
-                    <h3 className="text-2xl font-bold mb-6 text-cyan-300">
-                      Pulgarcita y las Primeras Misiones Digitales
-                    </h3>
-                    <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
-                      <p className="text-gray-300 mb-4">
-                        En la primera clase de Alfabetización Digital, iniciamos nuestro recorrido en formato taller, donde cada estudiante asumió un rol activo en su propio proceso de aprendizaje.
-                      </p>
-                      <p className="text-gray-300 mb-4">
-                        📚 Tomamos como punto de partida el video de Michel Serres sobre "Pulgarcita", reflexionando sobre los nuevos modos de aprender, enseñar y habitar el aula en contextos profundamente atravesados por lo digital.
-                      </p>
-                      <p className="text-gray-300 mb-4">
-                        💡 Introdujimos el concepto de IA generativa, explorando sus usos, potenciales y desafíos en el campo educativo.
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
-                          #AlfabetizaciónDigital
-                        </span>
-                        <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
-                          #Pulgarcita
-                        </span>
-                        <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
-                          #IAGenerativa
-                        </span>
-                      </div>
-                    </div>
-                    <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-                      <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
-                        <iframe
-                          src="https://padlet.com/embed/stncg6n3iar0eqpz"
-                          frameBorder="0"
-                          allow="camera;microphone;geolocation;display-capture;clipboard-write"
-                          style={{ width: '100%', height: '100%', display: 'block' }}
-                          className="w-full h-[500px] md:h-[608px]"
-                          title="Padlet colaborativo"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </>
-                )}
+                <div className="space-y-6">
+                  <div className="flex gap-4 justify-center">
+                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje"].map((tab, index) => (
+                      <button
+                        key={tab}
+                        onClick={() => setActiveTab(index)}
+                        className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                          activeTab === index
+                            ? "bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg"
+                            : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                        }`}
+                      >
+                        {tab}
+                      </button>
+                    ))}
+                  </div>
 
-                {activeTab === 1 && (
-                  <>
-                    <h3 className="text-2xl font-bold mb-6 text-cyan-300">
-                      Misión Cabildo 2.0
-                    </h3>
-                    <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
-                      <p className="text-gray-300 mb-4">
-                        En esta segunda clase, los y las estudiantes asumieron el desafío de diseñar una propuesta digital para reimaginar el 25 de mayo en el futuro, bajo la consigna:
-                      </p>
-                      <p className="text-gray-300 mb-4 font-semibold text-cyan-300">
-                        "¿Cómo recordaríamos el primer gobierno patrio en el año 2125?"
-                      </p>
-                      <p className="text-gray-300 mb-4">
-                        A través de la cápsula interactiva en Genially, se presentó la misión del día:
-                        construir en grupos una escena, pieza o actividad didáctica digital para un acto escolar del futuro, rompiendo con los moldes tradicionales y pensando nuevas formas de conmemorar desde lo tecnológico, lo creativo y lo reflexivo.
-                      </p>
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
-                          #Cabildo2.0
-                        </span>
-                        <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
-                          #RevoluciónDigital
-                        </span>
-                        <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
-                          #EducaciónDelFuturo
-                        </span>
+                  {activeTab === 0 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Pulgarcita y las Primeras Misiones Digitales
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <p className="text-gray-300 mb-4">
+                          En la primera clase de Alfabetización Digital, iniciamos nuestro recorrido en formato taller, donde cada estudiante asumió un rol activo en su propio proceso de aprendizaje.
+                        </p>
+                        <p className="text-gray-300 mb-4">
+                          📚 Tomamos como punto de partida el video de Michel Serres sobre "Pulgarcita", reflexionando sobre los nuevos modos de aprender, enseñar y habitar el aula en contextos profundamente atravesados por lo digital.
+                        </p>
+                        <p className="text-gray-300 mb-4">
+                          💡 Introdujimos el concepto de IA generativa, explorando sus usos, potenciales y desafíos en el campo educativo.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                            #AlfabetizaciónDigital
+                          </span>
+                          <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                            #Pulgarcita
+                          </span>
+                          <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                            #IAGenerativa
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
-                      <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
-                        <iframe
-                          title="Año 2125 Escuela Orbital Argentina"
-                          frameBorder="0"
-                          width="1200"
-                          height="675"
-                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          src="https://view.genially.com/682c82cbb342df338363e997"
-                          allow="fullscreen"
-                        ></iframe>
+                      <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                        <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
+                          <iframe
+                            src="https://padlet.com/embed/stncg6n3iar0eqpz"
+                            frameBorder="0"
+                            allow="camera;microphone;geolocation;display-capture;clipboard-write"
+                            style={{ width: '100%', height: '100%', display: 'block' }}
+                            className="w-full h-[500px] md:h-[608px]"
+                            title="Padlet colaborativo"
+                          ></iframe>
+                        </div>
                       </div>
-                    </div>
-                  </>
-                )}
+                    </>
+                  )}
+
+                  {activeTab === 1 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Misión Cabildo 2.0
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <p className="text-gray-300 mb-4">
+                          En esta segunda clase, los y las estudiantes asumieron el desafío de diseñar una propuesta digital para reimaginar el 25 de mayo en el futuro, bajo la consigna:
+                        </p>
+                        <p className="text-gray-300 mb-4 font-semibold text-cyan-300">
+                          "¿Cómo recordaríamos el primer gobierno patrio en el año 2125?"
+                        </p>
+                        <p className="text-gray-300 mb-4">
+                          A través de la cápsula interactiva en Genially, se presentó la misión del día:
+                          construir en grupos una escena, pieza o actividad didáctica digital para un acto escolar del futuro, rompiendo con los moldes tradicionales y pensando nuevas formas de conmemorar desde lo tecnológico, lo creativo y lo reflexivo.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                            #Cabildo2.0
+                          </span>
+                          <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                            #RevoluciónDigital
+                          </span>
+                          <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                            #EducaciónDelFuturo
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                        <div className="w-full aspect-[16/9] bg-[#F4F4F4] border border-gray-700 rounded-lg overflow-hidden">
+                          <iframe
+                            title="Año 2125 Escuela Orbital Argentina"
+                            frameBorder="0"
+                            width="1200"
+                            height="675"
+                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                            src="https://view.genially.com/682c82cbb342df338363e997"
+                            allow="fullscreen"
+                          ></iframe>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {activeTab === 2 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Mensaje
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '177.7778%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
+                          <iframe 
+                            loading="lazy" 
+                            style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }}
+                            src="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?embed" 
+                            allowFullScreen={true}
+                            allow="fullscreen"
+                          />
+                        </div>
+                        <p className="text-gray-300 text-center mt-4">
+                          <a 
+                            href="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?utm_content=DAGpKRokNNo&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                            target="_blank" 
+                            rel="noopener"
+                            className="text-purple-400 hover:text-purple-300 transition-colors"
+                          >
+                            Mensaje
+                          </a> de Leonardo Nausan
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </div>
               </CardContent>
             </Card>
             <div className="mt-8 flex flex-col items-center gap-4">
@@ -643,7 +685,7 @@ export default function Home() {
               Explorar Sora ChatGPT
             </a>
             <a
-              href="https://www.datalytics.com/blog/que-es-la-ia-generativa-y-como-funciona/?utm_term=ia%20generativa&utm_campaign=3+-+BLOG+-+AR+Search+-+Leva+Digital+Agency+7-3-24&utm_source=adwords&utm_medium=ppc&hsa_acc=7486748770&hsa_cam=22138853906&hsa_grp=178868411492&hsa_ad=729612081302&hsa_src=g&hsa_tgt=kwd-1673839964876&hsa_kw=ia%20generativa&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22138853906&gbraid=0AAAAAD1RTVxpfxMqvLPZbnyZ2aE1_F0aE&gclid=CjwKCAjw_pDBBhBMEiwAmY02NgQhEAVvCk6-rzyA4KT38fz3h0VJyfqvIZY5_j3SC0UophEXZE50YhoC3BgQAvD_BwE"
+              href="https://www.datalytics.com/blog/que-es-la-ia-generativa-y-como-funciona/?utm_term=ia%20generativa&utm_campaign=3+-+BLOG+-+AR+Search+-+Leva+Digital+Agency+7-3-24&utm_source=adwords&utm_medium=ppc&hsa_acc=7486748770&hsa_cam=22138853906&hsa_grp=178868411492&hsa_ad=729612081302&hsa_src=g&hsa_tgt=kwd-1673839964876&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=22138853906&gbraid=0AAAAAD1RTVxpfxMqvLPZbnyZ2aE1_F0aE&gclid=CjwKCAjw_pDBBhBMEiwAmY02NgQhEAVvCk6-rzyA4KT38fz3h0VJyfqvIZY5_j3SC0UophEXZE50YhoC3BgQAvD_BwE"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-6 rounded-lg shadow transition-colors"
