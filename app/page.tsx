@@ -164,7 +164,7 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="space-y-6">
                   <div className="flex gap-4 justify-center">
-                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje"].map((tab, index) => (
+                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje", "Bibliografía"].map((tab, index) => (
                       <button
                         key={tab}
                         onClick={() => setActiveTab(index)}
@@ -290,6 +290,122 @@ export default function Home() {
                             Mensaje
                           </a> de Leonardo Nausan
                         </p>
+                      </div>
+                    </>
+                  )}
+
+                  {activeTab === 3 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Bibliografía
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <div className="space-y-6">
+                          <div className="bg-gray-800/50 p-6 rounded-lg">
+                            <h4 className="text-xl font-semibold text-purple-300 mb-4">Secuencia Didáctica: Alfabetización Digital</h4>
+                            <div className="space-y-6">
+                              <div className="border-l-4 border-cyan-500 pl-4">
+                                <h5 className="text-lg font-semibold text-cyan-300 mb-2">1. Fundamentos Conceptuales</h5>
+                                <p className="text-gray-300 mb-3">
+                                  <a 
+                                    href="https://drive.google.com/file/d/1NGG_K6NrZsSeoz-mCJqrqxmjvSN7OlOb/view?usp=sharing" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                  >
+                                    Documento Base: Alfabetización Digital
+                                  </a>
+                                </p>
+                                <p className="text-gray-300 text-sm italic">
+                                  Este documento establece los fundamentos teóricos y conceptuales de la alfabetización digital, proporcionando el marco inicial para comprender la transformación educativa en la era digital.
+                                </p>
+                              </div>
+
+                              <div className="border-l-4 border-green-500 pl-4">
+                                <h5 className="text-lg font-semibold text-green-300 mb-2">2. Implementación Práctica</h5>
+                                <p className="text-gray-300 mb-3">
+                                  <a 
+                                    href="https://drive.google.com/file/d/1yAQjiDDmAE35YzDvWsxIWVN1av5c5t-s/view?usp=sharing" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                  >
+                                    Guía de Implementación: Herramientas Digitales
+                                  </a>
+                                </p>
+                                <p className="text-gray-300 text-sm italic">
+                                  Una guía práctica que detalla las estrategias y herramientas para implementar la alfabetización digital en el aula, con ejemplos concretos y casos de estudio.
+                                </p>
+                              </div>
+
+                              <div className="border-l-4 border-yellow-500 pl-4">
+                                <h5 className="text-lg font-semibold text-yellow-300 mb-2">3. Perspectiva Global y Futuro</h5>
+                                <p className="text-gray-300 mb-3">
+                                  <a 
+                                    href="https://www.unesco.org/es/digital-education/artificial-intelligence" 
+                                    target="_blank" 
+                                    rel="noopener"
+                                    className="text-purple-400 hover:text-purple-300 transition-colors"
+                                  >
+                                    UNESCO: Inteligencia Artificial en la Educación
+                                  </a>
+                                </p>
+                                <p className="text-gray-300 text-sm italic">
+                                  Una visión global sobre el futuro de la educación digital y el papel de la inteligencia artificial, proporcionando un marco para entender los desafíos y oportunidades emergentes.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="mt-6 p-4 bg-gray-900/50 rounded-lg">
+                              <h5 className="text-lg font-semibold text-cyan-300 mb-3">Objetivos de la Secuencia:</h5>
+                              <ul className="list-disc list-inside space-y-2 text-gray-300">
+                                <li>Comprender los fundamentos teóricos de la alfabetización digital</li>
+                                <li>Adquirir herramientas prácticas para la implementación en el aula</li>
+                                <li>Reflexionar sobre el futuro de la educación en la era digital</li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          {/* Referencias Bibliográficas Adicionales */}
+                          <div className="bg-gray-800/50 p-6 rounded-lg">
+                            <h4 className="text-xl font-semibold text-purple-300 mb-4">Referencias Bibliográficas Adicionales</h4>
+                            
+                            <div className="space-y-6">
+                              <div className="bg-gray-900/50 p-4 rounded-lg">
+                                <h5 className="text-lg font-semibold text-purple-300 mb-2">Libros</h5>
+                                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                                  <li>Serres, M. (2013). <span className="italic">Pulgarcita</span>. Fondo de Cultura Económica.</li>
+                                  <li>Buckingham, D. (2019). <span className="italic">The Media Education Manifesto</span>. Polity Press.</li>
+                                  <li>Jenkins, H. (2009). <span className="italic">Confronting the Challenges of Participatory Culture</span>. MIT Press.</li>
+                                </ul>
+                              </div>
+
+                              <div className="bg-gray-900/50 p-4 rounded-lg">
+                                <h5 className="text-lg font-semibold text-cyan-300 mb-2">Artículos</h5>
+                                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                                  <li>Selwyn, N. (2019). "What's the problem with learning analytics?". <span className="italic">Journal of Learning Analytics</span>, 6(3), 11-19.</li>
+                                  <li>Livingstone, S. (2018). "iGen: Why Today's Super-Connected Kids Are Growing Up Less Rebellious". <span className="italic">Journal of Children and Media</span>, 12(1), 118-123.</li>
+                                </ul>
+                              </div>
+
+                              <div className="bg-gray-900/50 p-4 rounded-lg">
+                                <h5 className="text-lg font-semibold text-green-300 mb-2">Recursos Digitales</h5>
+                                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                                  <li>UNESCO. (2021). <a href="https://unesdoc.unesco.org/ark:/48223/pf0000377074" target="_blank" rel="noopener" className="text-purple-400 hover:text-purple-300 transition-colors">"Reimagining our futures together: A new social contract for education"</a></li>
+                                  <li>OECD. (2021). <a href="https://www.oecd.org/education/back-to-the-future-of-education-178ef527-en.htm" target="_blank" rel="noopener" className="text-purple-400 hover:text-purple-300 transition-colors">"Back to the Future of Education"</a></li>
+                                </ul>
+                              </div>
+
+                              <div className="bg-gray-900/50 p-4 rounded-lg">
+                                <h5 className="text-lg font-semibold text-yellow-300 mb-2">Videos</h5>
+                                <ul className="list-disc list-inside space-y-2 text-gray-300">
+                                  <li>Serres, M. (2013). <a href="https://www.youtube.com/watch?v=4-LHiGq8QLI" target="_blank" rel="noopener" className="text-purple-400 hover:text-purple-300 transition-colors">"Pulgarcita: La generación que reinventará el mundo"</a></li>
+                                  <li>TEDx Talks. (2018). <a href="https://www.youtube.com/watch?v=br9b3-cxTPQ" target="_blank" rel="noopener" className="text-purple-400 hover:text-purple-300 transition-colors">"¿Qué es la IA generativa? – EducaIA"</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </>
                   )}
