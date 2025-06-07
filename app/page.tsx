@@ -164,7 +164,7 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="space-y-6">
                   <div className="flex gap-4 justify-center">
-                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje", "Bibliografía"].map((tab, index) => (
+                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje", "Bibliografía", "Mapa de Ruta"].map((tab, index) => (
                       <button
                         key={tab}
                         onClick={() => setActiveTab(index)}
@@ -275,14 +275,14 @@ export default function Home() {
                           <iframe 
                             loading="lazy" 
                             style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }}
-                            src="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?embed" 
+                            src="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?embed" 
                             allowFullScreen={true}
                             allow="fullscreen"
                           />
                         </div>
                         <p className="text-gray-300 text-center mt-4">
                           <a 
-                            href="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?utm_content=DAGpKRokNNo&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                            href="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?utm_content=DAGpToZG69o&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
                             target="_blank" 
                             rel="noopener"
                             className="text-purple-400 hover:text-purple-300 transition-colors"
@@ -406,6 +406,56 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
+                      </div>
+                    </>
+                  )}
+
+                  {activeTab === 4 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Mapa de Ruta
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <p className="text-gray-300 mb-6">
+                          En este encuentro, cada grupo presentó su versión del Cabildo 2.0, compartiendo propuestas creativas, con una gran dedicación y originalidad en sus producciones. Se llevó adelante una puesta en común muy enriquecedora, donde pudimos intercambiar ideas, enfoques y miradas sobre las distintas formas de narrar lo trabajado.
+                        </p>
+                        <p className="text-gray-300 mb-6">
+                          Para cerrar la clase, exploramos juntos el Mapa de Ruta del nuevo desafío:
+                          🚀 "Diseñar para transformar", que nos acompañará en los próximos encuentros.
+                        </p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          <span className="bg-cyan-900/50 text-cyan-300 px-3 py-1 rounded-full text-sm font-medium border border-cyan-700/50">
+                            #DiseñarParaTransformar
+                          </span>
+                          <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm font-medium border border-purple-700/50">
+                            #Cabildo2.0
+                          </span>
+                          <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm font-medium border border-green-700/50">
+                            #InnovaciónEducativa
+                          </span>
+                          <span className="bg-yellow-900/50 text-yellow-300 px-3 py-1 rounded-full text-sm font-medium border border-yellow-700/50">
+                            #AprendizajeColaborativo
+                          </span>
+                        </div>
+                        <div style={{ position: 'relative', width: '100%', height: 0, paddingTop: '56.2500%', paddingBottom: 0, boxShadow: '0 2px 8px 0 rgba(63,69,81,0.16)', marginTop: '1.6em', marginBottom: '0.9em', overflow: 'hidden', borderRadius: '8px', willChange: 'transform' }}>
+                          <iframe 
+                            loading="lazy" 
+                            style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }}
+                            src="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?embed" 
+                            allowFullScreen={true}
+                            allow="fullscreen"
+                          />
+                        </div>
+                        <p className="text-gray-300 text-center mt-4">
+                          <a 
+                            href="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?utm_content=DAGpToZG69o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h30e7e41627" 
+                            target="_blank" 
+                            rel="noopener"
+                            className="text-purple-400 hover:text-purple-300 transition-colors"
+                          >
+                            ROAD MAP SECUENCIA DIDÁCTICA
+                          </a> de Leonardo Nausan
+                        </p>
                       </div>
                     </>
                   )}
