@@ -275,14 +275,14 @@ export default function Home() {
                           <iframe 
                             loading="lazy" 
                             style={{ position: 'absolute', width: '100%', height: '100%', top: 0, left: 0, border: 'none', padding: 0, margin: 0 }}
-                            src="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?embed" 
+                            src="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?embed" 
                             allowFullScreen={true}
                             allow="fullscreen"
                           />
                         </div>
                         <p className="text-gray-300 text-center mt-4">
                           <a 
-                            href="https://www.canva.com/design/DAGpToZG69o/T6NhcQpnqgcRqsBU0PS8hg/watch?utm_content=DAGpToZG69o&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
+                            href="https://www.canva.com/design/DAGpKRokNNo/BH_z7TNnrGzIPrxvLZJGAw/watch?utm_content=DAGpKRokNNo&utm_campaign=designshare&utm_medium=embeds&utm_source=link" 
                             target="_blank" 
                             rel="noopener"
                             className="text-purple-400 hover:text-purple-300 transition-colors"
