@@ -241,15 +241,15 @@ export default function Home() {
             <Card className="bg-gray-800/90 border border-gray-700 hover:border-cyan-500/50 transition-colors">
               <CardContent className="p-6">
                 <div className="space-y-6">
-                  <div className="flex gap-4 justify-center">
-                    {["Pulgarcita", "Misión Cabildo 2.0", "Mensaje", "Bibliografía", "Mapa de Ruta"].map((tab, index) => (
+                  <div className="flex gap-4 justify-center overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-cyan-700 scrollbar-track-gray-800">
+                    {['Pulgarcita', 'Misión Cabildo 2.0', 'Mensaje', 'Bibliografía', 'Mapa de Ruta'].map((tab, index) => (
                       <button
                         key={tab}
                         onClick={() => setActiveTab(index)}
-                        className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                        className={`px-3 py-2 text-xs sm:text-sm md:px-4 md:py-2 rounded-lg transition-all duration-300 whitespace-nowrap ${
                           activeTab === index
-                            ? "bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg"
-                            : "bg-gray-800 text-gray-400 hover:bg-gray-700"
+                            ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
+                            : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
                         }`}
                       >
                         {tab}
@@ -291,7 +291,7 @@ export default function Home() {
                             frameBorder="0"
                             allow="camera;microphone;geolocation;display-capture;clipboard-write"
                             style={{ width: '100%', height: '100%', display: 'block' }}
-                            className="w-full h-[500px] md:h-[608px]"
+                            className="w-full h-[300px] md:h-[608px]"
                             title="Padlet colaborativo"
                           ></iframe>
                         </div>
@@ -308,7 +308,7 @@ export default function Home() {
                         <p className="text-gray-300 mb-4">
                           En esta segunda clase, los y las estudiantes asumieron el desafío de diseñar una propuesta digital para reimaginar el 25 de mayo en el futuro, bajo la consigna:
                         </p>
-                        <p className="text-gray-300 mb-4 font-semibold text-cyan-300">
+                        <p className="mb-4 font-semibold text-cyan-300">
                           "¿Cómo recordaríamos el primer gobierno patrio en el año 2125?"
                         </p>
                         <p className="text-gray-300 mb-4">
@@ -660,7 +660,7 @@ export default function Home() {
       </section>
 
       {/* Sección 5: Aula en acción */}
-      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-950 py-16 px-4 sm:px-6">
+      <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
