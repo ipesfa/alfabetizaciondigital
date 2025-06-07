@@ -50,6 +50,53 @@ function Tabs({ tabs, activeTab, setActiveTab }: { tabs: string[], activeTab: nu
   )
 }
 
+function InteractiveTextButton({ label, text }: { label: string; text: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div className="bg-gray-900/50 p-4 rounded-lg">
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="w-full text-left text-purple-300 hover:text-purple-200 transition-colors"
+      >
+        {label}
+      </button>
+      {isExpanded && (
+        <p className="mt-2 text-gray-300">{text}</p>
+      )}
+    </div>
+  );
+}
+
+function FlipCard({ frontText, backText, color }: { frontText: string; backText: string; color: string }) {
+  const [flipped, setFlipped] = useState(false);
+  
+  return (
+    <div
+      className="w-full md:w-1/2 h-48 perspective cursor-pointer"
+      onClick={() => setFlipped((f) => !f)}
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-500 transform ${flipped ? "rotate-y-180" : ""}`}
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Front */}
+        <div
+          className={`absolute w-full h-full backface-hidden bg-${color}-500 rounded-lg p-4 flex items-center justify-center`}
+        >
+          <p className="text-white text-center">{frontText}</p>
+        </div>
+        {/* Back */}
+        <div
+          className={`absolute w-full h-full backface-hidden bg-${color}-600 rounded-lg p-4 flex items-center justify-center rotate-y-180`}
+        >
+          <p className="text-white text-center">{backText}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const scrollRef = useRef(null)
   const [lightbox, setLightbox] = useState<{src: string, alt: string} | null>(null)
@@ -92,6 +139,12 @@ export default function Home() {
             >
               Alfabetización Digital
             </motion.h1>
+            <motion.div variants={fadeIn} className="mb-8">
+              <span className="relative text-xl md:text-2xl font-semibold tracking-wide text-cyan-300 opacity-80 px-4 backdrop-blur-sm">
+                Prof. Leonardo Nausan
+                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1/2 h-0.5 bg-cyan-300/40 rounded-full animate-pulse"></span>
+              </span>
+            </motion.div>
             <motion.h2 className="text-xl md:text-2xl mb-8 text-gray-200" variants={fadeIn}>
               Un viaje por la cultura digital y la educación del siglo XXI.
             </motion.h2>
@@ -103,12 +156,37 @@ export default function Home() {
                 Comenzar el viaje
               </Button>
             </motion.div>
-            {/* Nombre del profesor, moderno y centrado debajo del botón */}
+            {/* Lista de estudiantes */}
             <div className="w-full flex justify-center md:justify-end mt-28">
-              <span className="relative text-xl md:text-2xl font-semibold tracking-wide text-cyan-300 opacity-80 px-4 md:pr-16 backdrop-blur-sm">
-                Prof. Leonardo Nausan
-                <span className="absolute left-1/2 -translate-x-1/2 bottom-0 w-1/2 h-0.5 bg-cyan-300/40 rounded-full animate-pulse"></span>
-              </span>
+              <div className="flex flex-col items-end">
+                <div className="flex flex-wrap gap-x-2 text-sm justify-center">
+                  <span className="text-purple-300">Daiana Georgina</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-cyan-300">Susana Elizabeth</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-green-300">Maria Alejandra</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-yellow-300">Georgina Valeria</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-pink-300">Abril Soledad</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-blue-300">Joana Belen</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-orange-300">Mariana Silvina Mercedes</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-purple-300">Lucas Ezequiel</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-cyan-300">Elizabeth Margarita</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-green-300">Matias Martin</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-yellow-300">Marcelo Javier</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-pink-300">Cecilia Susana</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-blue-300">Inés</span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </GlowEffect>
@@ -998,53 +1076,5 @@ export default function Home() {
         </div>
       )}
     </main>
-  )
-}
-
-function FlipCard({ frontText, backText, color }: { frontText: string; backText: string; color: string }) {
-  const [flipped, setFlipped] = useState(false)
-  return (
-    <div
-      className="w-full md:w-1/2 h-48 perspective cursor-pointer"
-      onClick={() => setFlipped((f) => !f)}
-    >
-      <div
-        className={`relative w-full h-full transition-transform duration-500 transform ${flipped ? "rotate-y-180" : ""}`}
-        style={{ transformStyle: "preserve-3d" }}
-      >
-        {/* Front */}
-        <div
-          className={`absolute w-full h-full flex items-center justify-center bg-gray-900 border border-${color}-700 rounded-lg p-6 shadow-lg backface-hidden`}
-        >
-          <span className="text-white text-lg font-semibold">{frontText}</span>
-        </div>
-        {/* Back */}
-        <div
-          className={`absolute w-full h-full flex items-center justify-center bg-gray-900 border border-${color}-700 rounded-lg p-6 shadow-lg rotate-y-180 backface-hidden`}
-        >
-          <span className="text-white text-base text-center">{backText}</span>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function InteractiveTextButton({ label, text }: { label: string; text: string }) {
-  const [show, setShow] = useState(false)
-  return (
-    <div>
-      <button
-        className="w-full bg-cyan-900/50 text-cyan-300 border border-cyan-700/50 rounded-lg px-4 py-2 font-semibold mb-2 hover:bg-cyan-800 transition-colors"
-        onClick={() => setShow((s) => !s)}
-        type="button"
-      >
-        {show ? "Ocultar" : label}
-      </button>
-      {show && (
-        <div className="bg-gray-900 text-white rounded-lg p-4 shadow mt-2 text-base text-center animate-fade-in">
-          {text}
-        </div>
-      )}
-    </div>
   )
 }
