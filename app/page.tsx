@@ -101,6 +101,7 @@ export default function Home() {
   const scrollRef = useRef(null)
   const [lightbox, setLightbox] = useState<{src: string, alt: string} | null>(null)
   const [activeTab, setActiveTab] = useState(0)
+  const [activeActionTab, setActiveActionTab] = useState(0)
 
   useEffect(() => {
     if (!lightbox) return;
@@ -242,7 +243,7 @@ export default function Home() {
               <CardContent className="p-6">
                 <div className="space-y-6">
                   <div className="flex gap-4 justify-center overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-cyan-700 scrollbar-track-gray-800">
-                    {['Pulgarcita', 'Misión Cabildo 2.0', 'Mensaje', 'Bibliografía', 'Mapa de Ruta'].map((tab, index) => (
+                    {['Pulgarcita', 'Misión Cabildo 2.0', 'Mensaje', 'Bibliografía', 'Mapa de Ruta', 'Repositorio'].map((tab, index) => (
                       <button
                         key={tab}
                         onClick={() => setActiveTab(index)}
@@ -537,6 +538,26 @@ export default function Home() {
                       </div>
                     </>
                   )}
+
+                  {activeTab === 5 && (
+                    <>
+                      <h3 className="text-2xl font-bold mb-6 text-cyan-300">
+                        Repositorio
+                      </h3>
+                      <div className="bg-gray-900/50 p-4 rounded-lg mb-6">
+                        <div className="w-full rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10">
+                          <iframe
+                            src="https://coherent-sycamore-5c5.notion.site/ebd/20c730929797807b8c85eff93c67f5e6"
+                            width="100%"
+                            height="600"
+                            frameBorder="0"
+                            allowFullScreen
+                            className="w-full h-[400px] md:h-[600px] rounded-lg border-none"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
               </CardContent>
             </Card>
@@ -579,26 +600,49 @@ export default function Home() {
       <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-900 py-16 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">Acción</h2>
-          <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-left text-lg text-white">
-            <div className="mb-4 flex items-center gap-2">
-              <span className="text-2xl">📌</span>
-              <span className="font-semibold">Consigna:</span>
-            </div>
-            <p className="mb-6">
-              En grupos de 2 a 3 personas, deberán ponerse en el rol de docentes de un área curricular (Ej: Lengua, Matemática, Educación Artística, Formación Ética, etc.) y desarrollar una breve secuencia didáctica creativa para trabajar el 25 de mayo en un aula de nivel ?
-            </p>
-            <div className="bg-gray-900/80 rounded-lg p-6 mb-8">
-              <h3 className="text-cyan-300 font-semibold mb-3 text-lg">🧩 Incluí:</h3>
-              <ul className="list-disc list-inside space-y-2 text-base">
-                <li><b>Nivel y curso</b> al que está dirigida la secuencia</li>
-                <li><b>Objetivo de aprendizaje</b></li>
-                <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
-                <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
-                <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
-                <li><b>Subir</b> al Padlet colaborativo.</li>
-              </ul>
-            </div>
+          {/* Pestañas de Acción */}
+          <div className="flex gap-4 justify-center mb-8 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-cyan-700 scrollbar-track-gray-800">
+            {['Diseñar para transformar', 'Cabildo 2.0'].map((tab, index) => (
+              <button
+                key={tab}
+                onClick={() => setActiveActionTab(index)}
+                className={`px-3 py-2 text-xs sm:text-sm md:px-4 md:py-2 rounded-lg transition-all duration-300 whitespace-nowrap ${
+                  activeActionTab === index
+                    ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg'
+                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
           </div>
+          {activeActionTab === 1 && (
+            <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-left text-lg text-white">
+              <div className="mb-4 flex items-center gap-2">
+                <span className="text-2xl">📌</span>
+                <span className="font-semibold">Consigna:</span>
+              </div>
+              <p className="mb-6">
+                En grupos de 2 a 3 personas, deberán ponerse en el rol de docentes de un área curricular (Ej: Lengua, Matemática, Educación Artística, Formación Ética, etc.) y desarrollar una breve secuencia didáctica creativa para trabajar el 25 de mayo en un aula de nivel ?
+              </p>
+              <div className="bg-gray-900/80 rounded-lg p-6 mb-8">
+                <h3 className="text-cyan-300 font-semibold mb-3 text-lg">🧩 Incluí:</h3>
+                <ul className="list-disc list-inside space-y-2 text-base">
+                  <li><b>Nivel y curso</b> al que está dirigida la secuencia</li>
+                  <li><b>Objetivo de aprendizaje</b></li>
+                  <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
+                  <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
+                  <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
+                  <li><b>Subir</b> al Padlet colaborativo.</li>
+                </ul>
+              </div>
+            </div>
+          )}
+          {activeActionTab === 0 && (
+            <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-center text-lg text-white">
+              <span className="text-cyan-300 font-semibold">En producción</span>
+            </div>
+          )}
           <div className="w-full flex justify-center mt-8">
             <div className="relative w-full max-w-3xl aspect-[16/5] rounded-lg overflow-hidden shadow-xl shadow-cyan-500/10 bg-white flex items-center justify-center">
               <img
