@@ -618,86 +618,23 @@ export default function Home() {
           </div>
           {activeActionTab === 1 && (
             <div className="bg-gray-800/90 p-8 rounded-lg shadow-md border border-cyan-700/30 text-left text-lg text-white">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 text-cyan-300">👥 Trabajo en equipo</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>La actividad se realizará en duplas pedagógicas.</li>
-                    <li>Cada grupo deberá elegir un nombre que los identifique y acompañarlo con una imagen, GIF o meme que represente la esencia de su equipo.</li>
-                  </ul>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-purple-300">🎲 Ruleta de herramientas</h3>
-                  <p className="text-gray-300 mb-4">
-                    Para sumar un toque de azar y creatividad, cada grupo deberá participar del sorteo de la ruleta.
-                  </p>
-                  <p className="text-gray-300 mb-4">
-                    👉 Obtendrán 3 herramientas digitales aleatorias que deberán incluir en su secuencia.
-                  </p>
-                  <p className="text-gray-300">
-                    📌 El link al sorteo estará disponible en el mapa de ruta 🌀
-                  </p>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-green-300">📚 La secuencia didáctica</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>Debe estar dirigida a educación secundaria.</li>
-                    <li>Cada integrante de la dupla deberá desarrollar al menos una clase propia de mínimo 40 minutos.</li>
-                    <li>Pueden justificar y plantear los objetivos en conjunto, pero cada quien deberá presentar su propio contenido:
-                      <ul className="list-disc list-inside ml-6 mt-2">
-                        <li>Desde su especialidad o</li>
-                        <li>Desde un tema que estén trabajando en la práctica.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <div className="mt-4">
-                    <p className="text-gray-300 mb-2">La secuencia debe incluir de forma clara:</p>
-                    <ul className="list-disc list-inside space-y-2 text-gray-300">
-                      <li>🧑‍🏫 ¿A quién está dirigida?</li>
-                      <li>⏰ Duración estimada de la propuesta</li>
-                      <li>🛠️ Desarrollo de las clases (actividades + herramientas)</li>
-                      <li>🎯 Criterios de evaluación (puede ser cualitativa, con rúbricas, checklists, etc.)</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-yellow-300">💡 Importante:</h3>
-                  <p className="text-gray-300">
-                    Toda la planificación —justificación, objetivos, desarrollo y evaluación— debe estar integrada en la presentación de la secuencia.
-                    ¡No va en un documento aparte!
-                  </p>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-pink-300">🧠 ¿Dónde consultar?</h3>
-                  <p className="text-gray-300 mb-4">
-                    Revisen la pestaña Bibliografía en la página del espacio. Allí encontrarán los tres textos clave para esta etapa.
-                    También pueden sumar artículos o recursos propios si lo desean.
-                  </p>
-                  <p className="text-gray-300">
-                    👉 <a href="https://alfabetizaciondigital.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300">https://alfabetizaciondigital.vercel.app/</a>
-                  </p>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-blue-300">🗓️ Fechas clave</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-300">
-                    <li>📥 Entrega del avance: hasta el jueves 27 de junio (Subir al Padlet)</li>
-                    <li>✅ Entrega de la versión final: hasta el jueves 4 de julio (Subir al padlet)</li>
-                  </ul>
-                </div>
-
-                <div className="border-t border-gray-700 pt-6">
-                  <h3 className="text-2xl font-bold mb-4 text-orange-300">🔚 Cierre</h3>
-                  <p className="text-gray-300">
-                    Esta es la oportunidad de demostrar cómo integrar TIC, innovación, gamificación y creatividad en una secuencia real.
-                    El objetivo no es solo enseñar, sino transformar la experiencia de aprendizaje.
-                    ¡Sorprendan, propongan, diseñen para transformar!
-                  </p>
-                </div>
+              <div className="mb-4 flex items-center gap-2">
+                <span className="text-2xl">📌</span>
+                <span className="font-semibold">Consigna:</span>
+              </div>
+              <p className="mb-6">
+                En grupos de 2 a 3 personas, deberán ponerse en el rol de docentes de un área curricular (Ej: Lengua, Matemática, Educación Artística, Formación Ética, etc.) y desarrollar una breve secuencia didáctica creativa para trabajar el 25 de mayo en un aula de nivel ?
+              </p>
+              <div className="bg-gray-900/80 rounded-lg p-6 mb-8">
+                <h3 className="text-cyan-300 font-semibold mb-3 text-lg">🧩 Incluí:</h3>
+                <ul className="list-disc list-inside space-y-2 text-base">
+                  <li><b>Nivel y curso</b> al que está dirigida la secuencia</li>
+                  <li><b>Objetivo de aprendizaje</b></li>
+                  <li><b>Actividad o escena pedagógica concreta</b> (en vínculo con la efeméride)</li>
+                  <li><b>Herramienta digital utilizada</b> (Genially, video, Canva, etc.)</li>
+                  <li><b>Producto final</b> (puede ser un video, mural, afiche interactivo, podcast, obra breve, infografía, etc.)</li>
+                  <li><b>Subir</b> al Padlet colaborativo.</li>
+                </ul>
               </div>
             </div>
           )}
