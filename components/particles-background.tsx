@@ -1,20 +1,18 @@
 "use client"
 
-import { useCallback } from "react"
 import Particles from "@tsparticles/react"
-import { loadFull } from "@tsparticles/engine"
-import type { Engine } from "@tsparticles/engine"
+import { useCallback } from "react"
 
 export default function ParticlesBackground() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
+  const particlesLoaded = useCallback(async (container: any) => {
+    // Particles loaded callback
   }, [])
 
   return (
     <Particles
       id="tsparticles"
-      init={particlesInit}
       className="absolute inset-0 z-0"
+      particlesLoaded={particlesLoaded}
       options={{
         fullScreen: {
           enable: false,
@@ -35,7 +33,9 @@ export default function ParticlesBackground() {
               enable: true,
               mode: "repulse",
             },
-            resize: true,
+            resize: {
+              enable: true,
+            },
           },
           modes: {
             push: {
@@ -74,7 +74,6 @@ export default function ParticlesBackground() {
           number: {
             density: {
               enable: true,
-              area: 800,
             },
             value: 80,
           },
